@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Симплекс-метод</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Симплекс метод</h1>
+    <div class="container-fluid">
+        <hr>
+        <div class="row justify-content-center">
+            <h3>Помощь в использовании:</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                1) В поля вводятся только целые числа или дробные в формате 24/7, 4/5 <br>
+                2) При отстутствии базисной переменной, сразу начнётся искуственный базис
+            </div>
+            <div class="col-md-6">
+                3) В ограничениях должны быть ненулевые базовые переменные <br>
+                4) Во время выбора базисной переменной, нажимайте на числа красного цвета
+            </div>
+        </div>
+        <hr>
+    </div>
+    <label>
+        Введите размерность:
+        <input type="text" required id="form1">
+    </label><br>
+    <br>
+    <label>
+        Введите кол-во ограничений:
+        <input type="text" required id="form2">
+    </label><br>
+    <br>
+    <div>
+        <table id="target">
+            <tr>
+
+            </tr>
+            <tr>
+
+            </tr>
+        </table>
+        <table id="limitations">
+            <tr>
+
+            </tr>
+        </table>
+    </div>
+    <button id="ready1">Готово</button> <br>
+    <button id="readFile">Прочитать всё из файла</button>
+    <button id="bazis">Задать базисную переменную</button>
+    <br><br>
+    <table id="tableBazis">
+        <tr>
+
+        </tr>
+    </table><p id="textSave">Базисная переменная сохранена!</p><br>
+    <button id="save">Сохранить переменную</button><br><br>
+    <button id="manually">Получить начальные данные</button>
+    <hr>
+    <div id="writeMain">
+        
+    </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-12">
+                <div>
+                    <table id="simplexTable">
+                        <tr>
+                            <td>X<sub>*</sub></td>
+            
+                        </tr>
+                    </table>
+                </div>
+                <div class="go">Пошаговая работа</div>
+                <div class="goAuto">Вычислить автоматически</div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6" id="work">
+        
+            </div>
+            <div id="work1" class="col-md-6">
+                
+            </div>
+        </div>
+    </div>
+    <script src="jquery-1.11.0.js"></script>
+    <script src="FractionNumber.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script src="readFile.js"></script>
+</body>
+</html>
